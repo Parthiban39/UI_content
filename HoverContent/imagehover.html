@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageHover</title>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="mustang69.jpg" placeholder="mustang69">
+        </div>
+        <div class="content">
+            <h1>Mustang 1969</h1>
+            <p>develeped in 1969 and the horse power and built look is amazing! </p>
+        </div>
+    </div>
+</body>
+<style>
+    * ,*::before ,*::after{
+        margin: 0;
+        bottom: 0; 
+        box-sizing: border-box;
+    }
+    body{
+        height: 600px;
+        display: grid;
+        place-items: center; 
+        background-color: #ddd;
+    }
+    .container{
+        width: 450px;
+        height: 300px;
+        border-radius: 8px;
+        position: relative;
+    }
+    .container .image{
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+    }
+    .container .image img{
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        transition: 0.5s ease-in-out;
+    }
+    .container::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 2px solid white;
+        border-radius: inherit;
+        opacity: 0;
+        transition: 0.5s ease;
+    }
+    .container:hover img{
+        filter: grayscale(1)
+        brightness(0.3);
+    }
+    .container:hover::after{
+        opacity: 1;
+        inset: 20px;
+    }
+    .content{
+        width: 80%;
+        position:absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50% , 40%);
+        text-align: center;
+    }
+    .content h1{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-bottom: 10px;
+        color: #f32222;
+        scale: 0;
+    }
+    .content p{
+        scale: 0;
+        font-size: 16px;
+        line-height: 1.2;
+        color: #d1d1d1;
+    }
+    .container:hover .content h1{
+        scale: 1.7;
+    }
+    .container:hover .content p{
+        scale: 1.1;  
+    }
+</style>
+</html>

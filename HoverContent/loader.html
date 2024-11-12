@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+</head>
+<body>
+    <div class="container">
+    <div class="loader"></div>
+    </div>
+</body>
+
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #ddd;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+    }
+    .loader{
+        position: relative;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 5px solid;
+        color: #3a855e;  
+        display: grid;
+        place-items: center;
+        animation: rotate 1.5s infinite linear;
+    }
+    .loader::before , .loader::after{
+        content: "";
+        position: absolute;
+        border: inherit;
+        border-color: #fc9a69 transparent;
+        border-radius: inherit;
+        animation: inherit;
+        animation-duration: 0.5s;
+        animation-direction: reverse;
+    }
+    .loader::before{
+        width: 70%;
+        height: 70%;
+        animation-direction:normal;
+        animation-duration:inherit;
+    }
+    .loader::after{
+        width: 140%;
+        height: 130%;
+    }
+    @keyframes rotate{
+        100%{
+            transform: rotate(1turn);
+        }
+    }
+</style>
+</html>

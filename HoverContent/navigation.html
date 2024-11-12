@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation_Hover</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="#" class="link">about</a>
+            <a href="#" class="link">home</a>
+            <a href="#" class="link">project</a>
+            <a href="#" class="link">contact</a>
+        </ul>
+    </nav>
+</body>
+<style>
+    *,*::before,*::after{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: grey;
+    }
+    nav{
+        width: 100%;
+        max-width: fit-content;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: 24px 40px;
+    }
+    nav ul{
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+    .link{
+        text-decoration: none;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color:#ddd;
+        position: relative;
+        transition: color 0.3s;
+    }
+    .link:hover{
+        font-size: 22px;
+        color: black;
+    }
+    .link::after{
+        position: absolute;
+        content: "";
+        inset: 0;
+        background-color:#fefefe;
+        scale: 1 0;
+        z-index: -1;
+        transition: 0.4s;
+    }
+    .link:hover::after{ 
+        scale: 1 1;
+    }
+</style>
+</html>
