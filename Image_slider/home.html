@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+</head>
+<body>
+    <div class="container">
+        <img src="/Image_slider/DSC_3423.JPG">
+        <img src="/Image_slider/DSC_3424.JPG">
+        <img src="/Image_slider/DSC_3425.JPG">
+        <img src="/Image_slider/DSC_3426.JPG">
+    
+    </div>
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: black;
+    }
+    .container{
+        width: 70%;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        margin: 100px 0 0 200px;
+        gap: 10px;
+   }
+   .container img{
+       width: 20%;
+       height: 100%;
+       object-fit: cover;
+       border-radius: 8px;
+       border: 2px solid rgba(255,255,255,0.5);
+       transition: all 0.5s ease-in-out;
+   }
+   .container img:hover{
+       width: 35%;
+   }
+</style>
+</html>

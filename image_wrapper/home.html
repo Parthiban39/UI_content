@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image wrapper</title>
+</head>
+<body>
+    <div class="wrapper"></div>
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .wrapper{
+        margin: 100px 200px;
+        width: 500px;
+        height: 50vh;
+        background-size: 100% 100%;
+        border-radius: 8px;
+        box-shadow: 10px 10px 15px rgba(0,0,0,0.5);
+        animation: bganimation 5s linear infinite;
+    }
+    @keyframes bganimation {
+        0%{
+            background-image: url(/Image_slider/DSC_3424.JPG);
+        }
+        30%{
+            background-image: url(/Image_slider/DSC_3425.JPG);
+        }
+        60%{
+            background-image: url(/Image_slider/DSC_3425.JPG);
+        }
+        100%{
+            background-image: url(/Image_slider/DSC_3426.JPG);
+        }
+
+    }
+</style>
+</html>
